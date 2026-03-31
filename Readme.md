@@ -2,7 +2,7 @@
 
 ## Vorab
 
-1. `git clone <repo-link>` von diesem Repository
+1. `git clone git@github.com:tomschiffmann-teaching/03-dido-quiz-app-draft.git` von diesem Repository
 2. Den `.git` Ordner löschen, um mein repository von der Projektmappe zu trennen
 
 ## Docker Images bauen
