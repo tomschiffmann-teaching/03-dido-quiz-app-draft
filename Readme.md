@@ -43,3 +43,20 @@
 9. `docker run -p 3010:3000 tomteaching/draft-quiz-app`
 
 - `docker run -p <Host-Port>:<Docker-Port> <docker-hub-username>/<app-name>`
+
+## Docker Compose
+
+- Docker Compose ermöglicht die Definition mehrerer services
+- Erleichtert Entwicklungen und ihre abhängigkeiten
+- Fährt alle dort definierten services hoch und auch wieder herunter
+
+1. Guckt euch in Docker Desktop eure Volumes an
+2. Kopiert euch aus diesem repo die [./docker-compose.yml](./docker-compose.yml) und zusätzlich das gesamte [./monitoring/](./monitoring/) Verzeichnis
+3. Danach einfach `docker compose up -d`
+4. Volumes Reiter in Docker Desktop nochmal angucken
+5. Gucken, dass die apps auf [http://localhost:3000](http://localhost:3000) und [http://localhost:3001](http://localhost:3001)
+6. Danach die apps wieder herunterfahren mit `docker compose down`
+7. Überprüfen, dass die services nicht mehr laufen
+8. Volumes Reiter in Docker Desktop nochmal angucken
+9. In der Entwicklung wird auch häufig die Option `docker compose down -v` verwendet, um die lokalen Volumes mit zu löschen. Also einmal `docker compose down -v` ausführen
+10. Volumes Reiter in Docker Desktop nochmal angucken
