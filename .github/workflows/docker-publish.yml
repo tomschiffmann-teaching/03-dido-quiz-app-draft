@@ -28,7 +28,6 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            tomteaching/draft-quiz-app:latest
-            tomteaching/draft-quiz-app:${{ github.sha }}
+            tomteaching/draft-quiz-app:main
           cache-from: type=gha
           cache-to: type=gha,mode=max

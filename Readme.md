@@ -60,3 +60,30 @@
 8. Volumes Reiter in Docker Desktop nochmal angucken
 9. In der Entwicklung wird auch häufig die Option `docker compose down -v` verwendet, um die lokalen Volumes mit zu löschen. Also einmal `docker compose down -v` ausführen
 10. Volumes Reiter in Docker Desktop nochmal angucken
+
+## Docker Images automatisch builden und deployen
+
+1. Guckt euch die manuellen Schritte nochmal, welche wir genutzt haben, um ein docker image anhand von einer `Dockerfile` zu `builden` und zu `pushen`
+2. Vergleicht diese Schritte mit der [.github/workflows/docker-publish.yml](.github/workflows/docker-publish.yml) und versucht die parallelen zu finden
+3. Das Verzeichnis [.github](.github) in euer repository kopieren
+4. Falls nicht vorhanden, ein neues Repository auf [https://hub.docker.com/](https://hub.docker.com/)
+5. Repository namen notieren (z.B. `tomteaching/draft-quiz-app`)
+6. Docker Hub Account username notieren (`tomteaching`)
+7. Auf Profil icon klicken --> Account Settings --> Personal access Token
+8. Generate new Token --> Permissions auf Read, Write, Delete setzen
+9. Auf `Generate` klicken und token notieren
+10. In eurem remote repository auf [github.com](https://github.com) die secrets hinterlegen (Falls ihr nicht mehr wisst wie das geht, schaut [HIER](https://github.com/tomschiffmann-teaching/02_git_ci_cd/blob/main/CI_CD_Terraform.md))
+
+- `DOCKERHUB_USERNAME`: Euer Docker Hub username
+- `DOCKERHUB_TOKEN`: Der zuvor generierte Token
+
+1.  In eurem repo innerhalb der [.github/workflows/docker-publish.yml](.github/workflows/docker-publish.yml) die tags mit eurem docker hub repo austauschen (Zeile 31):
+
+```bash
+    tags: |
+        <euer-docker-hub-repo>:main
+```
+
+12. Wie gewohnt `commit` & `push`
+13. Auf github die pipelines verfolgen, wenn grün dann in docker hub gucken ob die images da sind
+14. Falls rot, bekommt ihr den Fehler alleine analysiert
