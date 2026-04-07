@@ -10,7 +10,7 @@
 1. [./Dockerfile](./Dockerfile) muss vorhanden sein, da es die "Anleitung" für das bauen der finalen App ist
 2. `docker build -t tomteaching/draft-quiz-app ./` --> Der Pfad muss auf das Verzeichnis verweisen, wo das Dockerfile liegt
 
-- `docker build -t <docker-hub-username>/<image-name> <Verzecihnis-mit-Dockerfile>`
+- `docker build -t <docker-hub-username>/<image-name> <Verzeichnis-mit-Dockerfile>`
   ![](./images/docker_desktop_image.png)
 
 3. `docker run -p 3010:3000  tomteaching/draft-quiz-app`
