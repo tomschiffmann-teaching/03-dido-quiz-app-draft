@@ -77,7 +77,7 @@
 - `DOCKERHUB_USERNAME`: Euer Docker Hub username
 - `DOCKERHUB_TOKEN`: Der zuvor generierte Token
 
-1.  In eurem repo innerhalb der [.github/workflows/docker-publish.yml](.github/workflows/docker-publish.yml) die tags mit eurem docker hub repo austauschen (Zeile 31):
+1.  In eurem repo innerhalb der [.github/workflows/docker-publish.yml](.github/workflows/docker-publish.yml) die tags mit eurem docker hub repo austauschen (Zeile 34):
 
 ```bash
     tags: |

@@ -1,5 +1,8 @@
 name: Build and Push Docker Image
 
+# Dieser workflow wird getriggert sobald ein push auf main statt findet
+# commit auf main branch --> push
+# MR von feat-branch --> Merge --> gilt auch als push auf main
 on:
   push:
     branches: [main]
