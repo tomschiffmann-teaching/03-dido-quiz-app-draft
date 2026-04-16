@@ -81,3 +81,7 @@ Dazu gehört:
 ```bash
 k3d cluster delete quiz
 ```
+
+## Zusammenfassung
+
+![](./images/k3d/Summary.jpg)
