@@ -75,3 +75,9 @@ Dazu gehört:
 
 - Ingress Regeln bestimmen das Routing
 - `kubectl apply -f k3d/ingress.yml`
+
+## Aufräumen
+
+```bash
+k3d cluster delete quiz
+```
