@@ -29,6 +29,9 @@ jobs:
       - name: Typecheck
         run: npm run typecheck
 
+      - name: Unit tests with coverage
+        run: npm run test:coverage
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:

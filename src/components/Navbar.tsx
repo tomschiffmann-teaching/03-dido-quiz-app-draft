@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { BrainCircuit, GlobeIC } from "lucide-react";
+import { BrainCircuit, Globe } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function Navbar() {
@@ -18,7 +18,7 @@ export default function Navbar() {
           {t.appTitle}
         </Link>
         <div className="flex items-center gap-2">
-          <GlobeIC className="h-4 w-4 text-gray-400" />
+          <Globe className="h-4 w-4 text-gray-400" />
           <div className="flex gap-1 rounded-lg border border-gray-200 p-0.5">
             <button
               onClick={() => setLocale("en")}
