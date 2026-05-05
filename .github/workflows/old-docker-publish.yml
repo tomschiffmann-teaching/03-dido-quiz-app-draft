@@ -4,8 +4,12 @@ name: Build and Push Docker Image
 # commit auf main branch --> push
 # MR von feat-branch --> Merge --> gilt auch als push auf main
 on:
-  push:
-    branches: [main]
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Type "docker" to confirm'
+        required: true
+        type: string
 
 jobs:
   build-and-push:
